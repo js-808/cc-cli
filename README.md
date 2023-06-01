@@ -1,4 +1,4 @@
-# ccprac - Competitive Coding Practice
+# cp-cli: Competitive Coding Practice
 
 This repo is still very much a work in progress
 
