@@ -1,0 +1,110 @@
+{
+
+    "ch1": {
+        "title": "Introductions",
+        "sections": {
+            "1.4": "1.4 Getting Started: The Easy Problems",
+            "1.6": "1.6 The Ad Hoc Problems"
+        }
+    },
+    "ch2": {
+        "title": "Data Structures and Libraries",
+        "sections": {
+            "2.2": "2.2 Linear DS with Built-in Libraries",
+            "2.3": "2.3 Non-Linear DS with Built-in Libraries",
+            "2.4": "2.4 DS with Our Own Libraries"
+        }
+    },
+    "ch3": {
+        "title": "Problem Solving Paradigms",
+        "sections": {
+            "3.2": "3.2 Complete Search",
+            "3.3": "3.3 Divide and Conquer",
+            "3.4": "3.4 Greedy",
+            "3.5": "3.5 Dynamic Programming"
+        }
+    },
+    "ch4": {
+        "title": "Graph",
+        "sections": {
+            "4.2": "4.2 Graph Traversal",
+            "4.3": "4.3 Minimum Spanning Tree (MST)",
+            "4.4": "4.4 Single-Source Shortest Paths (SSSP)",
+            "4.5": "4.5 All-Pairs Shortest Paths (APSP)",
+            "4.6": "4.6 Special Graphs"
+        }
+    },
+    "ch5": {
+        "title": "Mathematics",
+        "sections": {
+            "5.2": "5.2 Ad Hoc Mathematical Problems",
+            "5.3": "5.3 Number Theory",
+            "5.4": "5.4 Combinatorics",
+            "5.5": "5.5 Probability Theory",
+            "5.6": "5.6 Cycle-Finding",
+            "5.7": "5.7 Game Theory (Basic)",
+            "5.8": "5.8 Matrix Power" 
+
+        }
+    }, 
+    "ch6": {
+        "title": "String Processing", 
+        "sections": {
+            "6.2": "6.2 Ad Hoc String (Harder)",
+            "6.3": "6.3 String Processing with DP",
+            "6.4": "6.4 String Matching", 
+            "6.5": "6.5 Suffix Trie/Tree/Array", 
+            "6.6": "6.6 String Matching with Hashing", 
+            "6.7": "6.7 Anagram and Palindrome"
+        }
+    },
+    "ch7": {
+        "title": "(Computational) Geometry",
+        "sections": {
+            "7.2": "7.2 Basic Geometry Objects with Libraries",
+            "7.3": "7.3 Algorithms on Polygon with Libraries",
+            "7.4": "7.4 3D Geometry"
+        }
+    },
+    "ch8": {
+        "title": "More Advanced Search Techniques",
+        "sections": {
+            "8.2": "8.2 More Advanced Search Techniques",
+            "8.3": "8.3 More Advanced DP Techniques",
+            "8.4": "8.4 Network Flow",
+            "8.5": "8.5 Graph Matching", 
+            "8.6": "8.6 NP-hard/complete Problems",
+            "8.7": "8.7 Problem Decomposition"
+        }
+    },
+    "ch9": {
+        "title": "Rare Problems",
+        "sections": {
+            "9.slid": "9.2",
+            "9.sqrt": "9.4",
+            "9.towe": "9.6",
+            "9.matr": "9.7",
+            "9.lowe": "9.8",
+            "9.debr": "9.10",
+            "9.fast": "9.11",
+            "9.poll": "9.12",
+            "9.chi2": "9.13",
+            "9.form": "9.15",
+            "9.comb": "9.16",
+            "9.gaus": "9.17",
+            "9.artg": "9.18",
+            "9.clos": "9.19",
+            "9.asta": "9.20", 
+            "9.panc": "9.21",
+            "9.eggd": "9.22",
+            "9.minc": "9.25", 
+            "9.kuhn": "9.27",
+            "9.edmo": "9.28",
+            "9.chi1": "9.29", 
+            "9.cons": "9.30",
+            "9.inte": "9.31",
+            "9.line": "9.32", 
+            "9.grad": "9.33"
+        }
+    }
+}
