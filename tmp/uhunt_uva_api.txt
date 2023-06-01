@@ -1,0 +1,18 @@
+https://uhunt.onlinejudge.org/api 
+
+Book Problem API: 
+
+The json is an array of each chapter. 
+Each chapter has a 'title' and 'arr' attribute.
+
+The 'arr' attribute contains a list of sub-chapters. 
+Each sub-chapter also has a 'title' and 'arr' 
+attribute which contains sub-sub chapters.
+
+Each sub-sub chapter is a list. 
+The first element is the title of the sub-sub chapter.
+Second element onward are the problem numbers associated
+with it.
+
+(Negative numbers mean starred problems). - TODO WHAT IS A STARRED PROBLEM?
+
