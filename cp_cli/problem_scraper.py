@@ -34,7 +34,7 @@ import os
 
 # ------------------------------- GLOBALS  -------------------------------
 CPBOOK_PROBLEMS_URL = 'https://cpbook.net/methodstosolve'
-DATA_DIRECTORY = Path(os.path.join(__file__, '..', 'data')).resolve()
+DATA_DIRECTORY = Path(os.path.join(__file__, '..', '..', 'data')).resolve()
 
 
 # ------------------------ CUSTOM EXCEPTION CLASS ------------------------
