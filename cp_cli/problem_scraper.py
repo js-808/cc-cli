@@ -1,6 +1,6 @@
 """Problem Scraper
 
-This standalone script scrapes practice problem IDs
+This standalone module scrapes practice problem IDs
 for each chapter/section/subsection of Halim, Halim, and
 Effendy's "Competitive Programming 4" (CP4) book.
 
@@ -10,11 +10,11 @@ resulting file in problems.json in the src/data directory.
 
 This should be run whenever problems.json needs to be updated.
 
-The script will need to be updated if https://cpbook.net/methodstosolve
+The module will need to be updated if https://cpbook.net/methodstosolve
 ever changes its layout/HTML (as it should be, since this script
 is a web scraper after all).
 
-The script also depends on src/data/book_section_names.json,
+The module also depends on src/data/book_section_names.json,
 which is a file I created by hand by going through the books'
 Tables of Contents to get chapter and section titles that weren't
 explicitly recorded in the book's public website. This maps
@@ -34,7 +34,7 @@ import os
 
 # ------------------------------- GLOBALS  -------------------------------
 CPBOOK_PROBLEMS_URL = 'https://cpbook.net/methodstosolve'
-DATA_DIRECTORY = Path(os.path.join(__file__, '..', '..', 'data')).resolve()
+DATA_DIRECTORY = Path(os.path.join(__file__, '..', 'data')).resolve()
 
 
 # ------------------------ CUSTOM EXCEPTION CLASS ------------------------
@@ -143,8 +143,9 @@ def get_chapter_html(chapter: str, online_judge: str) -> str:
     """Get a JSON representation of CP4 problems in a given chapter.
 
     Parameters:
-        chapter (int): The chapter string to query
-        online_judge (str): The online judge to query
+        chapter (str): The chapter string to query
+        online_judge (str): The online judge to query (one of 'kattis'
+            or 'uva')
 
     Returns:
         str: The HTML of the corresponding chapter's problems
