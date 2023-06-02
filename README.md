@@ -1,6 +1,22 @@
-# cp-cli: Competitive Coding Practice
+# cp-cli: Competitive Programming Practice
 
-This repo is still very much a work in progress
+The idea of this repository is to create a CLI that allows you to submit competitive programming
+problems directly to the Kattis and UVa online judges, and get your results.
+
+In addition, the CLI will allow 
+you to download sample data (inputs and outputs) for a given problem to your local machine, and 
+allow you to view the difference between your output and the provided, expected output. 
+
+This will also provide a way to run a suite of user-created test cases all at once, 
+and provide output for them (though it will not provide expected output to compare to).
+
+Finally, the CLI will provide a way to create a folder/problem structure for practice
+problems of specific chapters and sub-sections of Halim, Halim, and Effendy's "Competitive
+Programming 4" book (Volumes 1 and 2), whose lists of problems in each chapter and 
+sub-section have been made publically available [here](https://cpbook.net/methodstosolve). 
+
+This repo is still very much a work in progress. I expect to be working on it over the coming weeks and months. Here is a list of very vague goals I hope to accomplish before the code is actually able 
+to be packaged, shipped, and used. 
 
 ## TODO
 
