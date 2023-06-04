@@ -23,7 +23,7 @@ title and description information. This file will also need
 to be updated if the website updates.
 """
 # ------------------------------- IMPORTS -------------------------------
-from typing import Dict, Union
+from typing import Dict, Tuple
 from bs4 import BeautifulSoup
 from bs4.element import Tag
 from pathlib import Path
@@ -57,7 +57,7 @@ def is_starred(row: Tag) -> bool:
     return 'class' in row.attrs and 'starred' in row.attrs['class']
 
 
-def parse_problem_description(desc_str: str) -> Union[str, str, str]:
+def parse_problem_description(desc_str: str) -> Tuple[str, str, str]:
     """Parse the problem description to get the section, subsection, and
     subsection title.
 
@@ -68,7 +68,7 @@ def parse_problem_description(desc_str: str) -> Union[str, str, str]:
     Returns:
         str: Fully qualified section '{chapter_no}.{section_no}'
         str: Fully qualified subsection
-            {chapter_no}.{section_no}{subsection_letter}`
+            {chapter_no}.{section_no}{subsection_letter}
         str: Subsection title
     """
     # Split off the subsection title and everything else
@@ -94,11 +94,15 @@ def parse_problem_description(desc_str: str) -> Union[str, str, str]:
     return fully_qual_sect, fully_qual_subsect, subsection_title
 
 
-def parse_all_problems(soup: BeautifulSoup) -> Dict:
+def parse_all_problems(soup: BeautifulSoup) -> dict:
     """Get a list of all of the problems on a given cpbook.net webpage.
 
     Parameters:
         soup (BeautifulSoup): A soup representation of the webpage.
+
+    Returns:
+        Dict: A dictionary representing all of the problems on a given
+            cpbook.net webpage.
     """
     # Get all rows from the 'problemtable' <table> tag
     table = soup.find("table", {'id': 'problemtable'})
@@ -214,9 +218,9 @@ def get_formatted_problem_info(section_root: dict) -> dict:
     """Format a section's title, kattis, and uva problem information.
 
     Parameters:
-        section_root (dict): A dictionary. Should have key 'title', and
-            might have keys 'kattis' or 'uva' with appropriate sub-dictionaries
-            if appropriate.
+        section_root (dict): A dictionary. Should have sub-dictionaries
+            which have key 'title', and might have keys 'kattis' or 'uva'
+            with more appropriate sub-dictionaries (if appropriate).
 
     Returns:
         dict: An output dictionary with formatted section titles.
@@ -242,15 +246,16 @@ def reformat_book_json(book_json: Dict) -> Dict:
         chapter_info = json.load(infile)
 
     # Chapter 9: Remove extraneous layer created by different HTML class setup
-    ch_9_sections = book_json['ch9']['9.']
-    book_json['ch9'] = ch_9_sections
+    if 'ch9' in book_json:
+        ch_9_sections = book_json['ch9']['9.']
+        book_json['ch9'] = ch_9_sections
 
-    # Chapter 9: Rename each of the sections to be numeric rather than
-    # alphabetic
-    for section in list(book_json['ch9']):
-        section_info = book_json['ch9'].pop(section)
-        new_section_name = chapter_info['ch9']['sections'][section]
-        book_json['ch9'][new_section_name] = section_info
+        # Chapter 9: Rename each of the sections to be numeric rather than
+        # alphabetic
+        for section in list(book_json['ch9']):
+            section_info = book_json['ch9'].pop(section)
+            new_section_name = chapter_info['ch9']['sections'][section]
+            book_json['ch9'][new_section_name] = section_info
 
     # All chapters: Reformat chapter and section names
     new_book_json = dict()
