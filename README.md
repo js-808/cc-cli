@@ -1,5 +1,12 @@
 # cp-cli: Competitive Programming Practice
 
+*Note* 
+
+This repo is still very much a work in progress. I expect to be working on it over the coming weeks and months. Here is a list of very vague goals I hope to accomplish before the code is actually able 
+to be packaged, shipped, and used. But for now, the code is pretty much useless as it is.
+
+*Indended Functionality*
+
 The idea of this repository is to create a CLI that allows you to submit competitive programming
 problems directly to the Kattis and UVa online judges, and get your results.
 
@@ -15,8 +22,7 @@ problems of specific chapters and sub-sections of Halim, Halim, and Effendy's "C
 Programming 4" book (Volumes 1 and 2), whose lists of problems in each chapter and 
 sub-section have been made publically available [here](https://cpbook.net/methodstosolve). 
 
-This repo is still very much a work in progress. I expect to be working on it over the coming weeks and months. Here is a list of very vague goals I hope to accomplish before the code is actually able 
-to be packaged, shipped, and used. 
+ 
 
 ## TODO
 
@@ -34,6 +40,6 @@ to be packaged, shipped, and used.
 5. Write submit functionality for both UVA and Kattis (highly non-trivial). May need to consult other peoples' repositories for this.
 6. Document the code nicely all along the way to make it easily modifiable, extendable, and maintainable.
 7. Also make the code portable onto various operating systems if possible.
-8. Create test cases for the functionality of this package. Run the tests frequently during development in order to ensure that all requirements are being met.
-9. Set up GitHub with license file, how to contribute, GitHub actions for running tests automatically whenever a branch needs to be merged, a commit/push is run, etc.
+8. ~~Create test cases for the functionality of this package. Run the tests frequently during development in order to ensure that all requirements are being met.~~
+9. ~~Set up GitHub with license file, how to contribute, GitHub actions for running tests automatically whenever a branch needs to be merged, a commit/push is run, etc.~~
 10. Celebrate your success!
